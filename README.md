@@ -1,49 +1,39 @@
-# Enterprise Supply Chain & Logistics Analytics
+# Supply Chain Operations Dashboard | Power BI, SQL, DAX
 
-Interactive Power BI and SQL-based analytics project designed to monitor logistics operations, delivery performance, inventory risks, and supply chain efficiency across a simulated enterprise e-commerce environment.
+Power BI and SQL-based supply chain analytics project focused on designing KPI reporting workflows, dimensional data models, and operational performance monitoring for logistics and fulfillment operations.
 
----
-
-# Project Status
-
-This project is currently under active development.
-
-## Completed
-- Star schema data model
-- KPI definitions and business logic
-- Power BI data modeling
-- Initial dashboard architecture
-- Documentation and analytical framework
-
-## In Progress
-- Executive dashboard visualizations
-- Delivery performance analytics
-- Inventory risk reporting
-- Advanced DAX measures
+![Star Schema](04_assets/star_schema_model.png)
 
 ---
 
-# Business Problem
+# Project Overview
 
-Large-scale supply chain operations generate complex operational and logistics datasets across warehouses, suppliers, delivery partners, and customer fulfillment channels.
+Designed a supply chain analytics framework using Power BI, SQL, DAX, and star schema modeling to support KPI reporting and operational performance analysis across warehouse, supplier, delivery, and fulfillment workflows.
 
-Without centralized visibility, management teams struggle to:
-- Identify delivery bottlenecks
-- Monitor carrier SLA performance
-- Detect inventory stockout risks
-- Reduce shipping costs
-- Monitor supplier reliability
-- Track damaged and returned orders
+The project focuses on building scalable analytical structures for monitoring delivery performance, inventory exposure, supplier reliability, shipping costs, and operational risk.
 
-This project was designed to provide centralized operational reporting and KPI monitoring through an interactive analytics platform.
+---
+
+# Business Objectives
+
+Large-scale logistics operations generate complex operational datasets across warehouses, suppliers, delivery partners, and customer fulfillment channels.
+
+This project was designed to support centralized operational reporting and KPI monitoring for:
+
+- Delivery performance analysis
+- Supplier reliability monitoring
+- Inventory exposure and stockout risk tracking
+- Shipping cost analysis
+- Return and damage-rate monitoring
+- Operational bottleneck identification
 
 ---
 
 # Data Model Architecture
 
-The project follows a Star Schema design with a centralized fact table and supporting dimensions.
+The project follows a Star Schema architecture with a centralized fact table and supporting dimensions optimized for scalable reporting and analytical workflows.
 
-![Star Schema](04_assets/star_schema_model.png)
+![Star Schema Model](04_assets/star_schema_model.png)
 
 ---
 
@@ -51,33 +41,43 @@ The project follows a Star Schema design with a centralized fact table and suppo
 
 ![Dashboard Navigation](04_assets/dashboard_navigation.png)
 
-### Executive Financial Overview
-- Revenue trends
-- Profitability analysis
-- Shipping cost monitoring
+## Executive Overview
+- Revenue and profitability monitoring
+- Shipping cost analysis
+- Operational KPI reporting
 
-### Delivery Performance Analytics
-- SLA compliance
-- Delay root-cause analysis
+## Delivery Performance Analytics
+- SLA compliance analysis
+- Delay root-cause tracking
 - Carrier performance monitoring
 
-### Inventory & Warehouse Risk
-- Stockout risk analysis
+## Inventory & Warehouse Risk
+- Inventory exposure analysis
 - Supplier reliability tracking
-- Warehouse inventory monitoring
+- Warehouse monitoring workflows
 
 ---
 
 # Key KPIs
 
+| KPI | Business Purpose |
+|---|---|
+| On-Time Delivery % | Measures delivery SLA performance |
+| Net Profit | Tracks operational profitability |
+| Net Profit Margin % | Evaluates margin efficiency |
+| Product Damage Rate % | Identifies operational quality issues |
+| Return Rate % | Measures fulfillment performance |
+| Shipping Cost Analysis | Tracks logistics cost efficiency |
+
+---
+
+# Sample KPI Logic
+
 ## On-Time Delivery %
 
 ```text
-(Total On-Time Orders / Total Orders) * 100
+(Total On-Time Orders / Total Orders) * 100Target Benchmark: 85%+
 ```
-
-Target Benchmark: 85%+
-
 ---
 
 ## Net Profit
@@ -96,27 +96,22 @@ Revenue - (Item Cost + Shipping Cost)
 
 ---
 
-## Product Damage Rate %
+# Key Analytical Features
 
-```text
-(Damaged Orders / Total Orders) * 100
-```
-
----
-
-## Return Rate %
-
-```text
-(Returned Orders / Total Orders) * 100
-```
+- Star schema data modeling for scalable BI reporting
+- SQL-based data transformation workflows
+- KPI and business logic development
+- DAX measure design for operational analysis
+- Power BI analytical architecture design
+- Supply chain operational monitoring framework
 
 ---
 
 # Technology Stack
 
 - Power BI
-- DAX
 - SQL
+- DAX
 - Star Schema Modeling
 - Excel / CSV Data Processing
 
@@ -125,10 +120,10 @@ Revenue - (Item Cost + Shipping Cost)
 # Repository Structure
 
 ```text
-01_raw_data/              -> Dataset notes and raw data references
+01_raw_data/              -> Raw datasets and source references
 02_powerbi_dashboard/     -> Power BI dashboard files
-03_documentation/         -> Business requirements and architecture docs
-04_assets/                -> Screenshots and project visuals
+03_documentation/         -> Business requirements and architecture documentation
+04_assets/                -> Dashboard screenshots and project visuals
 ```
 
 ---
@@ -137,21 +132,14 @@ Revenue - (Item Cost + Shipping Cost)
 
 - Interactive executive KPI dashboards
 - Advanced DAX calculations
-- Operational trend analysis
+- Drill-through operational reporting
 - Inventory risk alerting
-- Drill-through order-level reporting
+- Enhanced operational trend analysis
 
 ---
 
 # Limitations
 
-- Dataset is simulated and intended for portfolio demonstration purposes
-- Dashboard currently focuses on historical operational analysis
-- External variables such as weather and macro demand conditions are not yet incorporated
-
----
-
-# Author
-
-Manan Agarwal  
-University of Alberta — Computing Science & Mathematics
+- Dataset is simulated for portfolio and analytical demonstration purposes
+- Current implementation primarily focuses on analytical architecture and KPI framework design
+- External variables such as macroeconomic demand and weather conditions are not yet incorporated
