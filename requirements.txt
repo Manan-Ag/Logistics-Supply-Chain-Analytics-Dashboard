@@ -1,0 +1,4 @@
+powerbi
+sql
+dax
+excel
